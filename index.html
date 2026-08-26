@@ -781,6 +781,8 @@
 <script>
 /* ===== 可视化编辑模式 ===== */
 (function(){
+  /* 编辑能力开关：仅当 URL 带 #edit 时才注入编辑器 UI（线上访客零编辑入口） */
+  if(!/#edit/.test(location.hash)) return;
   var LS_KEY='wjz_portfolio_edits_v1';
   var EK_SEL='h2.section-title,h3,p,.who,.lead,.tag,.section-sub,.wt,.sub,.pain,.sol,.val,.data,.m-card h4,.m-card p,.mc-t,.mc-d,.mv,.about-card p,.about-list li,.str b,.str span,.ts-t,.ts-d,.tn b,.tn span,.pl b,.pl span,.ev li,.cc .k,.cc .v,footer p,.new-card h3,.new-card p,.new-text';
   var DEL_SEL='.work,.about-card,.m-card,.str,.tn,.ts-row,.img,.mv,.pl,.ev li,.cc,.mid-layer,.pipeline,.new-card,.new-text';
